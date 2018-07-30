@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KengService", "KengService\KengService.csproj", "{45330E99-0836-4BD8-A982-76DD65AD8D30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KengWebClient", "KengWebClient\KengWebClient.csproj", "{3E0DCFD8-539B-4913-9A27-857F5EC428A2}"
+	ProjectSection(ProjectDependencies) = postProject
+		{45330E99-0836-4BD8-A982-76DD65AD8D30} = {45330E99-0836-4BD8-A982-76DD65AD8D30}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KengWebClient.Tests", "KengWebClient.Tests\KengWebClient.Tests.csproj", "{76677B8D-9F50-45C4-B707-9F8889385ED6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowDesktopClient", "WindowDesktopClient\WindowDesktopClient.csproj", "{B82D9C15-DFF7-4C78-9CA1-520E7B071AD7}"
+	ProjectSection(ProjectDependencies) = postProject
+		{45330E99-0836-4BD8-A982-76DD65AD8D30} = {45330E99-0836-4BD8-A982-76DD65AD8D30}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibCommon", "LibCommon\LibCommon.csproj", "{2FF2A8F5-06C4-431A-A533-9A3525B933E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibPluginManagerment", "LibPluginManagerment\LibPluginManagerment.csproj", "{BE7C643E-AA71-411A-915B-50AC9FA807F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45330E99-0836-4BD8-A982-76DD65AD8D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45330E99-0836-4BD8-A982-76DD65AD8D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45330E99-0836-4BD8-A982-76DD65AD8D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45330E99-0836-4BD8-A982-76DD65AD8D30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E0DCFD8-539B-4913-9A27-857F5EC428A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E0DCFD8-539B-4913-9A27-857F5EC428A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E0DCFD8-539B-4913-9A27-857F5EC428A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E0DCFD8-539B-4913-9A27-857F5EC428A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76677B8D-9F50-45C4-B707-9F8889385ED6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76677B8D-9F50-45C4-B707-9F8889385ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76677B8D-9F50-45C4-B707-9F8889385ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76677B8D-9F50-45C4-B707-9F8889385ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B82D9C15-DFF7-4C78-9CA1-520E7B071AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B82D9C15-DFF7-4C78-9CA1-520E7B071AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B82D9C15-DFF7-4C78-9CA1-520E7B071AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B82D9C15-DFF7-4C78-9CA1-520E7B071AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FF2A8F5-06C4-431A-A533-9A3525B933E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FF2A8F5-06C4-431A-A533-9A3525B933E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FF2A8F5-06C4-431A-A533-9A3525B933E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FF2A8F5-06C4-431A-A533-9A3525B933E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7C643E-AA71-411A-915B-50AC9FA807F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7C643E-AA71-411A-915B-50AC9FA807F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7C643E-AA71-411A-915B-50AC9FA807F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7C643E-AA71-411A-915B-50AC9FA807F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A410EC29-1254-4FBB-8CE4-75035AFB9CB9}
+	EndGlobalSection
+EndGlobal
