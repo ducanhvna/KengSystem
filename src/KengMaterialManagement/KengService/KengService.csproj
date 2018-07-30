@@ -101,9 +101,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KengPgModel\KengPgModel.csproj">
-      <Project>{a9388ade-e9b8-469d-a4f1-5cf8808fb15e}</Project>
-      <Name>KengPgModel</Name>
+    <ProjectReference Include="..\LibKengModel\LibKengModel.csproj">
+      <Project>{2914bb48-4548-4ca8-b660-4158f358f54f}</Project>
+      <Name>LibKengModel</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

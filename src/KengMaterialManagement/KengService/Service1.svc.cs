@@ -1,4 +1,4 @@
-﻿using KengPgModel.Models;
+﻿using LibKengModel;
 using KengService.DatabaseContext;
 using System;
 using System.Collections.Generic;
