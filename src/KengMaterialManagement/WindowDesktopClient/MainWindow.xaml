@@ -4,9 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowDesktopClient"
+        xmlns:vm="clr-namespace:WindowDesktopClientNS.ViewModel"
         mc:Ignorable="d"
+        DataContext="{DynamicResource mainViewModel}"
         Title="MainWindow" Height="450" Width="800">
+    <Window.Resources>
+        <vm:ViewModelMainWindow x:Key="mainViewModel"/>
+    </Window.Resources>
     <Grid>
-        
+        <TextBlock Text="{Binding Message}"/>
     </Grid>
 </Window>
