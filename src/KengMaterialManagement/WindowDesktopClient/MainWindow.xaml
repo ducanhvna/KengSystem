@@ -12,6 +12,28 @@
         <vm:ViewModelMainWindow x:Key="mainViewModel"/>
     </Window.Resources>
     <Grid>
-        <TextBlock Text="{Binding Message}"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--Tool bar-->
+        <DockPanel>
+            <ToolBarTray DockPanel.Dock="Top">
+                <ToolBar>
+                    <Button Command="{Binding}" Content="New" />
+                    <Button Command="Open" Content="Open" />
+                    <Button Command="Save" Content="Save" />
+                </ToolBar>
+                <ToolBar>
+                    <Button Command="Cut" Content="Cut" />
+                    <Button Command="Copy" Content="Copy" />
+                    <Button Command="Paste" Content="Paste" />
+                </ToolBar>
+            </ToolBarTray>
+            <TextBox AcceptsReturn="True" />
+        </DockPanel>
+        <Grid>
+            <TextBlock Text="{Binding Message}"/>
+        </Grid>
     </Grid>
 </Window>

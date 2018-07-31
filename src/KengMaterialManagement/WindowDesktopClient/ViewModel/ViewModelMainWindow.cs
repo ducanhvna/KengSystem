@@ -1,4 +1,5 @@
-﻿using CommonNS.ViewModel;
+﻿using CommonNS.Helpers;
+using CommonNS.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,13 @@ namespace WindowDesktopClientNS.ViewModel
         public ViewModelMainWindow()
         {
             Message = m_client.GetData(9);
+            ListStoreSupported abcd = new ListStoreSupported
+            {
+                
+            };
+            var abc = m_client.GetListStoreSupported(abcd);
+            // Initalize create new store command
+            CreateNewStoreCommand = new RelayCommand(CreateNewStore);
         }
         #endregion
 
@@ -40,6 +48,15 @@ namespace WindowDesktopClientNS.ViewModel
                     RaisePropertyChanged("Message");
                 }
             }
+        }
+        #endregion
+
+        #region Create new Container
+        public RelayCommand CreateNewStoreCommand { get; private set; }
+
+        private void CreateNewStore(object param)
+        {
+
         }
         #endregion
     }

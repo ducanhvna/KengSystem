@@ -103,7 +103,13 @@
     <None Include="Connected Services\KengServiceReference\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Connected Services\KengServiceReference\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Connected Services\KengServiceReference\WindowDesktopClientNS.KengServiceReference.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\KengServiceReference\WindowDesktopClientNS.KengServiceReference.ListStoreSupported.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">

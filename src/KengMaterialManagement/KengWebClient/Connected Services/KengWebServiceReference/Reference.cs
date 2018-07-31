@@ -74,6 +74,54 @@ namespace KengWebClient.KengWebServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ListStoreSupported", Namespace="http://schemas.datacontract.org/2004/07/LibKengModel")]
+    [System.SerializableAttribute()]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(KengWebClient.KengWebServiceReference.CompositeType))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(object[]))]
+    [System.Runtime.Serialization.KnownTypeAttribute(typeof(string[]))]
+    public partial class ListStoreSupported : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private object[] StoreCategoriesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public object[] StoreCategories {
+            get {
+                return this.StoreCategoriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StoreCategoriesField, value) != true)) {
+                    this.StoreCategoriesField = value;
+                    this.RaisePropertyChanged("StoreCategories");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="KengWebServiceReference.IService1")]
     public interface IService1 {
@@ -89,6 +137,12 @@ namespace KengWebClient.KengWebServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<KengWebClient.KengWebServiceReference.CompositeType> GetDataUsingDataContractAsync(KengWebClient.KengWebServiceReference.CompositeType composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListStoreSupported", ReplyAction="http://tempuri.org/IService1/GetListStoreSupportedResponse")]
+        KengWebClient.KengWebServiceReference.ListStoreSupported GetListStoreSupported(KengWebClient.KengWebServiceReference.ListStoreSupported composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListStoreSupported", ReplyAction="http://tempuri.org/IService1/GetListStoreSupportedResponse")]
+        System.Threading.Tasks.Task<KengWebClient.KengWebServiceReference.ListStoreSupported> GetListStoreSupportedAsync(KengWebClient.KengWebServiceReference.ListStoreSupported composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -132,6 +186,14 @@ namespace KengWebClient.KengWebServiceReference {
         
         public System.Threading.Tasks.Task<KengWebClient.KengWebServiceReference.CompositeType> GetDataUsingDataContractAsync(KengWebClient.KengWebServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
+        }
+        
+        public KengWebClient.KengWebServiceReference.ListStoreSupported GetListStoreSupported(KengWebClient.KengWebServiceReference.ListStoreSupported composite) {
+            return base.Channel.GetListStoreSupported(composite);
+        }
+        
+        public System.Threading.Tasks.Task<KengWebClient.KengWebServiceReference.ListStoreSupported> GetListStoreSupportedAsync(KengWebClient.KengWebServiceReference.ListStoreSupported composite) {
+            return base.Channel.GetListStoreSupportedAsync(composite);
         }
     }
 }

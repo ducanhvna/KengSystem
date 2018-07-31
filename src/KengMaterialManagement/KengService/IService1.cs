@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LibKengModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.Serialization;
@@ -19,7 +20,15 @@ namespace KengService
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
+        [WebInvoke(UriTemplate = "composite", Method = "POST",
+            BodyStyle = WebMessageBodyStyle.WrappedRequest,
+            RequestFormat = WebMessageFormat.Json,
+            ResponseFormat = WebMessageFormat.Json)]
+        [OperationContract]
+        ListStoreSupported GetListStoreSupported(ListStoreSupported composite);
         // TODO: Add your service operations here
+
+
     }
 
 

@@ -164,6 +164,9 @@
     <Content Include="Connected Services\KengWebServiceReference\KengWebClient.KengWebServiceReference.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <Content Include="Connected Services\KengWebServiceReference\KengWebClient.KengWebServiceReference.ListStoreSupported.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
     <None Include="Connected Services\KengWebServiceReference\Service1.disco" />
     <None Include="Connected Services\KengWebServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\KengWebServiceReference\configuration.svcinfo" />
@@ -192,6 +195,12 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Connected Services\KengWebServiceReference\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KengWebServiceReference\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\KengWebServiceReference\Service131.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />

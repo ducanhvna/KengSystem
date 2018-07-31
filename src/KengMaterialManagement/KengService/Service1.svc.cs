@@ -38,5 +38,29 @@ namespace KengService
             }
             return composite;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="composite"></param>
+        /// <returns></returns>
+        public ListStoreSupported GetListStoreSupported(ListStoreSupported composite)
+        {
+            if (composite == null)
+            {
+                throw new ArgumentNullException("composite");
+            }
+            composite.StoreCategories = new List<StoreSupported>();
+            composite.StoreCategories.Add(
+                new StoreSupported
+                {
+                    id = 1,
+                    name = "sssssssss",
+                }
+                );
+            return composite;
+        }
+
+      
     }
 }

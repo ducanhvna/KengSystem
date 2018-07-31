@@ -74,6 +74,112 @@ namespace WindowDesktopClientNS.KengServiceReference {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="ListStoreSupported", Namespace="http://schemas.datacontract.org/2004/07/LibKengModel")]
+    [System.SerializableAttribute()]
+    public partial class ListStoreSupported : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private WindowDesktopClientNS.KengServiceReference.StoreSupported[] StoreCategoriesField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public WindowDesktopClientNS.KengServiceReference.StoreSupported[] StoreCategories {
+            get {
+                return this.StoreCategoriesField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.StoreCategoriesField, value) != true)) {
+                    this.StoreCategoriesField = value;
+                    this.RaisePropertyChanged("StoreCategories");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="StoreSupported", Namespace="http://schemas.datacontract.org/2004/07/LibKengModel")]
+    [System.SerializableAttribute()]
+    public partial class StoreSupported : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int idField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private string nameField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int id {
+            get {
+                return this.idField;
+            }
+            set {
+                if ((this.idField.Equals(value) != true)) {
+                    this.idField = value;
+                    this.RaisePropertyChanged("id");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public string name {
+            get {
+                return this.nameField;
+            }
+            set {
+                if ((object.ReferenceEquals(this.nameField, value) != true)) {
+                    this.nameField = value;
+                    this.RaisePropertyChanged("name");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="KengServiceReference.IService1")]
     public interface IService1 {
@@ -89,6 +195,12 @@ namespace WindowDesktopClientNS.KengServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetDataUsingDataContract", ReplyAction="http://tempuri.org/IService1/GetDataUsingDataContractResponse")]
         System.Threading.Tasks.Task<WindowDesktopClientNS.KengServiceReference.CompositeType> GetDataUsingDataContractAsync(WindowDesktopClientNS.KengServiceReference.CompositeType composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListStoreSupported", ReplyAction="http://tempuri.org/IService1/GetListStoreSupportedResponse")]
+        WindowDesktopClientNS.KengServiceReference.ListStoreSupported GetListStoreSupported(WindowDesktopClientNS.KengServiceReference.ListStoreSupported composite);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/GetListStoreSupported", ReplyAction="http://tempuri.org/IService1/GetListStoreSupportedResponse")]
+        System.Threading.Tasks.Task<WindowDesktopClientNS.KengServiceReference.ListStoreSupported> GetListStoreSupportedAsync(WindowDesktopClientNS.KengServiceReference.ListStoreSupported composite);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -132,6 +244,14 @@ namespace WindowDesktopClientNS.KengServiceReference {
         
         public System.Threading.Tasks.Task<WindowDesktopClientNS.KengServiceReference.CompositeType> GetDataUsingDataContractAsync(WindowDesktopClientNS.KengServiceReference.CompositeType composite) {
             return base.Channel.GetDataUsingDataContractAsync(composite);
+        }
+        
+        public WindowDesktopClientNS.KengServiceReference.ListStoreSupported GetListStoreSupported(WindowDesktopClientNS.KengServiceReference.ListStoreSupported composite) {
+            return base.Channel.GetListStoreSupported(composite);
+        }
+        
+        public System.Threading.Tasks.Task<WindowDesktopClientNS.KengServiceReference.ListStoreSupported> GetListStoreSupportedAsync(WindowDesktopClientNS.KengServiceReference.ListStoreSupported composite) {
+            return base.Channel.GetListStoreSupportedAsync(composite);
         }
     }
 }
