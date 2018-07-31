@@ -40,7 +40,7 @@ namespace KengService
         }
 
         /// <summary>
-        /// 
+        /// GetListStoreSupported
         /// </summary>
         /// <param name="composite"></param>
         /// <returns></returns>
